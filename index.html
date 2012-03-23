@@ -75,6 +75,7 @@ section {
 	overflow: auto;
 	padding: 0 20px;
 	vertical-align: top;
+	margin-bottom: 5px;
 }
 section h2 {
 	background-image: linear-gradient(#BBBBBB,#AAAAAA);
@@ -122,6 +123,35 @@ a.inactive {
 
 footer {
 	border-top: 1px solid #CCC;
+}
+
+/* iPhone */
+@media screen and (max-width: 480px) and (max-height: 480px) {
+	header {
+		position: absolute;
+		top: 60px;
+		left: -70px;
+		transform: rotate(-90deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+		display: inline-block;
+	}
+
+	section h2:hover {
+		transform: none;
+	}
+
+	#content {
+		display: inline-block;
+		width: 1300px;
+		margin-left: 30px;
+	}	
+}
+
+/* iPad */
+@media screen and (max-width: 1024px) and (max-height: 768px) and (min-height: 500px) {
+	section {
+		height: 170px;
+	}
 }
 </style>
 <script>
@@ -186,6 +216,7 @@ Rekommenderar att du använder någon av följande<br />
 	<h1>Han Lin Yap</h1>
 </header>
 
+<div id="content">
 <section class="red">
 	<h2>Latest</h2>
 	<span class="sort">Sort by: Update</span>
@@ -269,6 +300,7 @@ Rekommenderar att du använder någon av följande<br />
 		<li><a href="http://project.zencodez.net/old_index1.html">Projects 1</a></li>
 	</ul>
 </section>
+</div>
 
 <footer>
 	<p><a href="http://yap.nu">Yap.nu</a> Last modified 2012-03-23
