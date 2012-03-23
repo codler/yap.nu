@@ -12,8 +12,22 @@
 <!-- javascript -->
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/jquery.css3finalize-2.3.min.js"></script>
+<script src="js/modernizr-2.5.3.min.js"></script>
 <!--[if IE 8 ]><![endif]-->
 <style>
+section::-webkit-scrollbar {
+    width: 12px;
+}
+section::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+section::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
 body {
 	background-color: #333;
 	color: #CCC;
@@ -93,9 +107,11 @@ footer {
 jQuery(function ($) {
 
 	// Github
-	$.getJSON('https://api.github.com/users/codler/repos?per_page=100', function(data) {
+	$.getJSON('https://api.github.com/users/codler/repos?per_page=100&callback=?', function(data) {
+		console.log(data);
+
 		// Filter forks
-		data = $.grep(data, function(i) { return !i.fork });
+		data = $.grep(data.data, function(i) { return !i.fork });
 		data = data.sort(function(a, b) { return a.pushed_at > b.pushed_at ? -1 : 1 });
 		
 		var html = '';
@@ -113,7 +129,7 @@ jQuery(function ($) {
 	});
 	
 	// Stackoverflow
-	$.getJSON('https://api.stackexchange.com/2.0/users/304894?site=stackoverflow', function(data) {
+	$.getJSON('https://api.stackexchange.com/2.0/users/304894?site=stackoverflow&callback=?', function(data) {
 
 		$('.stackoverflow').html('Stackoverflow <span class="tag">rep:' + data.items[0].reputation + '</span>');
 	});
