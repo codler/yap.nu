@@ -108,7 +108,6 @@ jQuery(function ($) {
 
 	// Github
 	$.getJSON('https://api.github.com/users/codler/repos?per_page=100&callback=?', function(data) {
-		console.log(data);
 
 		// Filter forks
 		data = $.grep(data.data, function(i) { return !i.fork });
