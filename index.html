@@ -116,7 +116,7 @@ a.inactive {
 	color: grey;
 }
 
-.qrcode:hover, .enlarged {
+.enlarged {
 	border: 5px solid #FFFFFF;
 	transform: scale(5);
 }
@@ -194,6 +194,10 @@ jQuery(function ($) {
 	// qrcode
 	$('.qrcode').click(function() {
 		$(this).toggleClass('enlarged');
+	}).hover(function() {
+		$(this).addClass('enlarged');
+	}, function() {
+		$(this).removeClass('enlarged');
 	});
 
 });
