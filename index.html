@@ -16,7 +16,7 @@
 <!--[if IE 8 ]><![endif]-->
 <style>
 section::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 section::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -25,7 +25,7 @@ section::-webkit-scrollbar-track {
 section::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(255,255,255,0.8); 
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.5); 
 }
 
 @keyframes wobble {
@@ -44,16 +44,22 @@ h1:hover {
 }
 
 body {
-	background-color: #333;
+	background-color: #222;
 	color: #CCC;
 }
 h1 {
 	text-align: center;
 }
 a {
-	background-image: linear-gradient(#333344,#333333);
 	color: grey;
 	text-decoration: none;
+}
+.red a:hover,
+.blue a:hover,
+.green a:hover,
+.yellow a:hover,
+a:hover, a.inactive:hover {
+	text-decoration: underline;
 }
 .red a {
 	color: red;
@@ -73,10 +79,11 @@ section {
 	width: 200px;
 	height: 250px;
 	overflow: auto;
-	padding: 0 20px;
+	padding: 0 15px;
 	vertical-align: top;
-	margin-bottom: 5px;
+	margin: 0 5px 5px;
 }
+
 section h2 {
 	background-image: linear-gradient(#BBBBBB,#AAAAAA);
 	border-radius: 3px;
@@ -87,19 +94,19 @@ section h2 {
 	transition: transform 0.5s;
 }
 section h2:hover {
-	transform: scale(1.2);
+	transform: scale(0.95);
 }
 section.red h2 {
-	background-image: linear-gradient(#AA6666,#FF5555);
+	background-image: linear-gradient(#BB6666,#FF5555);
 }
 section.blue h2 {
-	background-image: linear-gradient(#6666AA,#5555FF);
+	background-image: linear-gradient(#6666BB,#5555FF);
 }
 section.green h2 {
-	background-image: linear-gradient(#66AA66,#55FF55);
+	background-image: linear-gradient(#66BB66,#55FF55);
 }
 section.yellow h2 {
-	background-image: linear-gradient(#AAAA66,#FFFF55);
+	background-image: linear-gradient(#BBBB66,#FFFF55);
 }
 
 .sort {
@@ -123,6 +130,8 @@ a.inactive {
 
 footer {
 	border-top: 1px solid #CCC;
+	padding: 5px 0 0 20px;
+	margin-top: 5px;
 }
 
 /* iPhone */
@@ -144,7 +153,11 @@ footer {
 		display: inline-block;
 		width: 1300px;
 		margin-left: 30px;
-	}	
+	}
+
+	footer {
+		padding: 0;
+	}
 }
 
 /* iPad */
@@ -308,7 +321,7 @@ Rekommenderar att du använder någon av följande<br />
 
 <footer>
 	<p><a href="http://yap.nu">Yap.nu</a> Last modified 2012-03-23
-		<br /><br />
+		<br />
 		<img src="http://metroroll.zencodez.net/ref/email.php" />
 
 		<img src="http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=http%3A//yap.nu&chld=H|0" class="qrcode" alt="qrcode" width="30"/>
