@@ -208,8 +208,9 @@ jQuery(function ($) {
 	
 	// Stackoverflow
 	$.getJSON('https://api.stackexchange.com/2.0/users/304894?site=stackoverflow&callback=?', function(data) {
-
-		$('.stackoverflow').html('Stackoverflow <span class="tag">rep:' + data.items[0].reputation + '</span>');
+		if (!data.error_id) {
+			$('.stackoverflow').html('Stackoverflow <span class="tag">rep:' + data.items[0].reputation + '</span>');
+		}
 	});
 
 	// qrcode
