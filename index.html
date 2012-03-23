@@ -107,6 +107,13 @@ footer {
 <script>
 jQuery(function ($) {
 
+	// Facebook
+	$.getJSON('https://graph.facebook.com/211587045382?callback=?', function(data) {
+
+		$('.aldstayngstavan').html('Vem är din äldsta/yngsta vän? <span class="tag">daily users:' + data.daily_active_users + '</span>');
+
+	});
+
 	// Github
 	$.getJSON('https://api.github.com/users/codler/repos?per_page=100&callback=?', function(data) {
 
