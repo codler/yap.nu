@@ -1,0 +1,31 @@
+a:link {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FF0000;
+}
+a:visited {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	color: #CC0000;
+}
+a:active {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 21px;
+	font-style: normal;
+	font-weight: bolder;
+	color: #FFFFFF;
+}
+.mylayers { position: relative; visibility: hidden; left: 20; top: -10; }
+h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	color: #c00505;
+}
+
+

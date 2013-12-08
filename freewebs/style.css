@@ -1,0 +1,91 @@
+body {
+	background-color: #FFFFFF;
+	background-image: url(bilder/bg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+h2 {
+	font-family: Tahoma;
+	font-size: 24px;
+	color: #FFFFFF;
+	text-decoration: underline;
+	background-color: #000000;
+	font-style: italic;
+}
+p {
+	font-family: Tahoma;
+	color: #000000;
+	font-size: 14px;
+	font-weight: bolder;
+}
+a:link {
+	font-family: Tahoma;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-size: 14px;
+}
+a:visited {
+	font-family: Tahoma;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-size: 14px;
+}
+a:hover {
+	font-family: Tahoma;
+	color: #2CF417;
+	font-size: 14px;
+}
+#headcss a:link {
+	font-family: Tahoma;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 16px;
+}
+#headcss a:visited {
+	font-family: Tahoma;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 16px;
+}
+#headcss a:hover {
+	font-family: Tahoma;
+	color: #2CF417;
+	font-size: 16px;
+}
+#headcss2 a:link {
+	font-family: Tahoma;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 14px;
+}
+#headcss2 a:visited {
+	font-family: Tahoma;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 14px;
+}
+#headcss2 a:hover {
+	font-family: Tahoma;
+	color: #2CF417;
+	font-size: 14px;
+}
+#headcss3 a:link {
+	font-family: Tahoma;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 12px;
+}
+#headcss3 a:visited {
+	font-family: Tahoma;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 12px;
+}
+#headcss3 a:hover {
+	font-family: Tahoma;
+	color: #2CF417;
+	font-size: 12px;
+}
+.blink {
+	text-decoration: blink;
+}
